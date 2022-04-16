@@ -49,13 +49,20 @@ The reading and math score values for Thomas High School 9th graders were change
 
 To fix this considerable change in passing percentages, the Thomas High School 9th graders were taken out of the calculations for passing grades. The 10th, 11th, and 12th graders were the only students considered in grade percentage calculations. 
 
-##### Thomas High School
+##### Thomas High School - Performance
 
 - % Passing Math: 66.9 to 93.2
 - % Passing Reading: 69.7 to 97.0
 - Overall Passing %: 65.1 to 90.3 
 
 As issustrated, the refactored grade percentages closely match the original % calculations before changing the 9th grade scores to NaN values.
+
+###### Thomas High School - Impact on ranking
+In terms of overall performance, Thomas High School has a 2nd place ranking (90.63%) overall passing. This is the same ranking as before replacing Thomas High School's 9th grade scores. If the total Thomas High School student count was calculated (including 9th graders) the rank would have dropped to 8th overall.
+
+#### Impact on replacing ninth grade scores
+
+
 
 ## Summary
 ---
