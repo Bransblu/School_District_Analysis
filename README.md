@@ -28,7 +28,19 @@ The district summary registered small changes to score averages and passing perc
   - % Passing Reading: 85.8 to 85.7
   - % Overall Passing: 65.2 to 64.9
 
+![Original_district_summary](Resources/original_district_summary.png "Original District Summary")
 
+![Reworked_district_summary](Resources/reworked_district_summary.png "Reworked District Summary")
+
+#### Code Example
+
+Using loc method to get number of ninth grade Thomas High School students. 
+
+    # Step 1. Get the number of students that are in ninth grade at Thomas High School.
+    # These students have no grades. 
+    students_no_grades_count = school_data_complete_df.loc[(school_data_complete_df['school_name'] == 'Thomas High School') & 
+                                                        (school_data_complete_df['grade'] == '9th')].count()["student_name"]
+                                                     
 
 #### School Summary
 The school summary wasn't greatly impacted outside of Thomas High School. With the reading and math scores being adjusted, the averages and percentages of all schools were slightly lowered, except for the Average Reading Score which rose by .03. The score averages across all schools weren't impacted greatly. 
@@ -75,6 +87,7 @@ As issustrated, the refactored grade percentages closely match the original % ca
 
 #### Impact on replacing ninth grade scores
 
+As shown below, both math and reading 9th grade values for Thomas High School have been replaced by "NaN" values. 
 
 ##### Math by Grade
 
