@@ -39,16 +39,37 @@ The district summary registered small changes to score averages and passing perc
 
 ![Reworked_district_summary](Resources/reworked_district_summary.png "Reworked District Summary")
 
-#### Code Example
+#### Code 
 
-Using loc method to get number of ninth grade Thomas High School students. 
+Using loc method to get number of ninth grade Thomas High School students, replacing both reading and math scores. 
+
+    # Step 2. Use the loc method on the student_data_df to select all the reading scores from the 9th grade at Thomas High School and replace them with NaN.
+    student_data_df.loc[(student_data_df['school_name'] == 'Thomas High School') & 
+                    (student_data_df['grade'] == '9th'), 'reading_score'] = np.nan
+    #  Step 3. Refactor the code in Step 2 to replace the math scores with NaN.
+    student_data_df.loc[(student_data_df['school_name'] == 'Thomas High School') & 
+                    (student_data_df['grade'] == '9th'), 'math_score'] = np.nan
+
+![Ths_Nan_Scores](Resources/ths_NaN_scores.png "Student Data DF-NaN")
+
+
+Using loc to get the count of 10th - 12th graders by subtracting count of 9th graders. 
 
     # Step 1. Get the number of students that are in ninth grade at Thomas High School.
     # These students have no grades. 
     students_no_grades_count = school_data_complete_df.loc[(school_data_complete_df['school_name'] == 'Thomas High School') & 
-                                                        (school_data_complete_df['grade'] == '9th')].count()["student_name"]
-                                                        
-Using loc to get the count of 10th - 12th graders by subtracting count of 9th graders.
+                                                       (school_data_complete_df['grade'] == '9th')].count()["student_name"]
+                                                       
+    # Step 2. Subtract the number of students that are in ninth grade at 
+    # Thomas High School from the total student count to get the new total student count.
+    student_count_reworked = student_count - students_no_grades_count
+    student_count_reworked
+    
+    # Step 3. Calculate the passing percentages with the new total student count.
+    passing_math_percentage = passing_math_count / float(student_count_reworked) * 100
+    
+    # Step 4.Calculate the overall passing percentage with new total student count.
+    overall_passing_percentage = overall_passing_math_reading_count / student_count_reworked * 100
 
     # Step 5.  Get the number of 10th-12th graders from Thomas High School (THS).
     ths_student_count = school_data_complete_df.loc[(school_data_complete_df['school_name'] == 'Thomas High School')].count()["student_name"] 
@@ -56,6 +77,23 @@ Using loc to get the count of 10th - 12th graders by subtracting count of 9th gr
     ths_reworked_students = ths_student_count - students_no_grades_count
 
     ths_reworked_students
+    
+In these final steps, I've coded to include the correct student counts to calculate percentages accurately. 
+
+    # Step 10. Calculate the percentage of 10th-12th grade students passing reading from Thomas High School.
+    per_students_ths_reading = (pass_reading_ths_df) / float(ths_reworked_students) * 100
+
+    # Step 11. Calculate the overall passing percentage of 10th-12th grade from Thomas High School. 
+    per_overall_ths_passing = pass_math_reading_ths_df / float(ths_reworked_students) * 100
+    
+    # Step 12. Replace the passing math percent for Thomas High School in the per_school_summary_df.
+    per_school_summary_df.loc['Thomas High School', '% Passing Math'] = per_students_ths_math
+
+    # Step 13. Replace the passing reading percentage for Thomas High School in the per_school_summary_df.
+    per_school_summary_df.loc['Thomas High School', '% Passing Reading'] = per_students_ths_reading
+    
+    # Step 14. Replace the overall passing percentage for Thomas High School in the per_school_summary_df.
+    per_school_summary_df.loc['Thomas High School', '% Overall Passing'] = per_overall_ths_passing
                                                      
 
 #### School Summary
