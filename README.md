@@ -79,13 +79,19 @@ In terms of overall performance, Thomas High School has a 2nd place ranking (90.
 
 ##### School Spending
 
-![Spending](Resources/scores_school_spending.png " School Spending Summary")
+
+
+![Spending_summary](Resources/scores_school_spending.png "Spending Summary")
 
 ##### School Size
+
+The school size summary remains unchanged after replacing the 9th grade scores and adjusting student count calculations.
 
 ![Size](Resources/school_size_performance.png "School Size Summary")
 
 ##### School Type
+
+The school type summary remains unchanged after replacing the 9th grade scores and adjusting student count calculations.
 
 ![Type](Resources/school_type_performance.png "School Type Summary")
 
