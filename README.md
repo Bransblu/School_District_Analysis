@@ -40,8 +40,11 @@ The school summary wasn't greatly impacted outside of Thomas High School. With t
 - % Passing Reading: 89.2 to 87.4
 - Overall Passing Percentage: 73.3 to 71.6
 
+Before replacing 9th grade scores
+
 ![Initial_School_Summary](Resources/THS_old_school_summary.png "Old School Summary")
 
+After replacing 9th grade scores
 
 ![New_School_Summary](Resources/THS_new_school_summary.png "New School Summary")
 
@@ -65,30 +68,36 @@ To fix this considerable change in passing percentages, the Thomas High School 9
 As issustrated, the refactored grade percentages closely match the original % calculations before changing the 9th grade scores to NaN values.
 
 ###### Thomas High School - Impact on ranking
-In terms of overall performance, Thomas High School has a 2nd place ranking (90.63%) overall passing. This is the same ranking as before replacing Thomas High School's 9th grade scores. If the total Thomas High School student count was calculated (including 9th graders) the rank would have dropped to 8th overall.
+
+- Thomas High School has a 2nd place ranking (90.63%) overall passing
+  - This is the same ranking as before replacing Thomas High School's 9th grade scores
+- If the total Thomas High School student count was calculated (including 9th graders) the rank would have dropped to 8th overall.
 
 #### Impact on replacing ninth grade scores
 
-##### Math and Reading Score by Grade
 
-Math
+##### Math by Grade
+
+
 
 ![Math_by_grade](Resources/math_grade_performance.png "Math Performance by Grade")
 
-Reading
+##### Reading by Grade
 
 ![Reading_by_grade](Resources/reading_grade_performance.png "Reading Performance by Grade")
 
 
 ##### School Spending
 
-The higher the school spending, the lower the performance. As shown below, 
+
+- The higher the school spending, the lower the performance.
+- When digging deeper, the overall budget for district type schools is considerable higher as is the student count. 
 
 ![Spending_summary](Resources/spending_summary.png "Spending Summary")
 
 ##### School Size
 
-As shown in the range below, small and medium sized schools have relative success compared to larger schools. 
+As shown in the range below, small and medium sized schools have relative success compared to larger schools. Medium sized schools (1000-1999 students) were the only category to change, and it was less than .5%. The large and small size schools were impacted. This is due to Thomas High School being a middle sized school.
 
 - Both small and medium school ranges (0-999, 1000-1999) average an Overall Passing % of 90.5%. 
 - Large schools (2000-5000) have an Overall Passing % of 58%
@@ -97,18 +106,13 @@ As shown in the range below, small and medium sized schools have relative succes
 
 ##### School Type
 
-Scores by school type demonstrate that charter schools earn higher grade score averages. Even more significant is the % Overall Passing difference; Charter passing 90% of their students while District schools pass 54%. 
+School type demonstrates that charter schools earn higher grade score averages. Even more significant is the % Overall Passing difference; Charter passing 90% of their students while District schools pass 54%. There is a correlation to school size as every district school is large in size (2000-5000 students). While technically the performance changed per school type, it's a neglegable amount. 
+
 
 ![Type](Resources/school_type_performance.png "School Type Summary")
 
 ## Summary
 ---
+Theere have been changes to Thomas High School math averages, reading averages, math passing percentage, reading passing percentage, and overall passing percentage. The differences are minute, but present. The student count for Thomas High School has been adjusted to exclude 9th graders to more accurately calculate results. The overall passing percentage initially had the most significant change before changing calculations to exclude the 9th grade scores from calculations. There are NaN values shown in both the Thomas High School math and reading score by grade images.
 
-#### Change #1
-
-#### Change #2
-
-#### Change #3
-
-#### Change #4
 
