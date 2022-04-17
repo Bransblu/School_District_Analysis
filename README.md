@@ -69,29 +69,35 @@ In terms of overall performance, Thomas High School has a 2nd place ranking (90.
 
 #### Impact on replacing ninth grade scores
 
-##### Math Score by Grade
+##### Math and Reading Score by Grade
+
+Math
 
 ![Math_by_grade](Resources/math_grade_performance.png "Math Performance by Grade")
 
-##### Reading Score by Grade
+Reading
 
 ![Reading_by_grade](Resources/reading_grade_performance.png "Reading Performance by Grade")
 
+
 ##### School Spending
 
+The higher the school spending, the lower the performance. As shown below, 
 
-
-![Spending_summary](Resources/scores_school_spending.png "Spending Summary")
+![Spending_summary](Resources/spending_summary.png "Spending Summary")
 
 ##### School Size
 
-The school size summary remains unchanged after replacing the 9th grade scores and adjusting student count calculations.
+As shown in the range below, small and medium sized schools have relative success compared to larger schools. 
+
+- Both small and medium school ranges (0-999, 1000-1999) average an Overall Passing % of 90.5%. 
+- Large schools (2000-5000) have an Overall Passing % of 58%
 
 ![Size](Resources/school_size_performance.png "School Size Summary")
 
 ##### School Type
 
-The school type summary remains unchanged after replacing the 9th grade scores and adjusting student count calculations.
+Scores by school type demonstrate that charter schools earn higher grade score averages. Even more significant is the % Overall Passing difference; Charter passing 90% of their students while District schools pass 54%. 
 
 ![Type](Resources/school_type_performance.png "School Type Summary")
 
