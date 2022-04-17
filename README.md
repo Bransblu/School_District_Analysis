@@ -28,6 +28,8 @@ The district summary registered small changes to score averages and passing perc
   - % Passing Reading: 85.8 to 85.7
   - % Overall Passing: 65.2 to 64.9
 
+
+
 #### School Summary
 The school summary wasn't greatly impacted outside of Thomas High School. With the reading and math scores being adjusted, the averages and percentages of all schools were slightly lowered, except for the Average Reading Score which rose by .03. The score averages across all schools weren't impacted greatly. 
 
@@ -37,6 +39,11 @@ The school summary wasn't greatly impacted outside of Thomas High School. With t
 - % Passing Math: 81.0 to 79.2
 - % Passing Reading: 89.2 to 87.4
 - Overall Passing Percentage: 73.3 to 71.6
+
+![Initial_School_Summary](Resources/THS_old_school_summary.png "Old School Summary")
+
+
+![New_School_Summary](Resources/THS_new_school_summary.png "New School Summary")
 
 #### Thomas High School Impact
 The reading and math score values for Thomas High School 9th graders were changed to NaN values. This reduced the amount of Thomas High School students by 461 students. The change in student count (from 39,170 to 38,709) impacted the Average Reading and Math Scores, % Passing Reading and Math, and % Overall Passing. **The significant change was to passing percentages** As shown below, taking out the 9th grade scores dropped the schools passing percentages by 28.4%. 
@@ -62,7 +69,25 @@ In terms of overall performance, Thomas High School has a 2nd place ranking (90.
 
 #### Impact on replacing ninth grade scores
 
+##### Math Score by Grade
 
+![Math_by_grade](Resources/math_grade_performance.png "Math Performance by Grade")
+
+##### Reading Score by Grade
+
+![Reading_by_grade](Resources/reading_grade_performance.png "Reading Performance by Grade")
+
+##### School Spending
+
+![Spending](Resources/scores_school_spending.png " School Spending Summary")
+
+##### School Size
+
+![Size](Resources/school_size_performance.png "School Size Summary")
+
+##### School Type
+
+![Type](Resources/school_type_performance.png "School Type Summary")
 
 ## Summary
 ---
