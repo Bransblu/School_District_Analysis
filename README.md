@@ -1,15 +1,22 @@
 # School District Analysis
 
+![School_Hands_Raised](Resources/08619177-0624-464b-8b67-b28cd61b913e_adobestock_118245338.png "Study.com, 2018")
+
 ## Project Overview
 ---
 
 ### Purpose
 Analyzing school district for the school board utilizing Pandas. It has been decided to change the 9th grade math and reading scores from Thomas High School to NaN with evidence found that the 9th grade scores from Thomas High School have been altered. After altering the Thomas High School data, the school district analysis was redone to completion.
 
+### Conclusion
+It is my recommendation that this data is sufficient to use to report and present to the school board. 
+
 ### Resources
 [loc method - Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.loc.html)
 
 [Pandas formatting DataFrame](https://www.geeksforgeeks.org/formatting-integer-column-of-dataframe-in-pandas/#:~:text=Let%E2%80%99s%20see%20different%20methods%20of%20formatting%20integer%20column,commas%20and%20Dollar%20sign%20with%20two%20decimal%20places.)
+
+[FERPA Law](https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html)
 
 ## Results
 ---
@@ -40,6 +47,15 @@ Using loc method to get number of ninth grade Thomas High School students.
     # These students have no grades. 
     students_no_grades_count = school_data_complete_df.loc[(school_data_complete_df['school_name'] == 'Thomas High School') & 
                                                         (school_data_complete_df['grade'] == '9th')].count()["student_name"]
+                                                        
+Using loc to get the count of 10th - 12th graders by subtracting count of 9th graders.
+
+    # Step 5.  Get the number of 10th-12th graders from Thomas High School (THS).
+    ths_student_count = school_data_complete_df.loc[(school_data_complete_df['school_name'] == 'Thomas High School')].count()["student_name"] 
+
+    ths_reworked_students = ths_student_count - students_no_grades_count
+
+    ths_reworked_students
                                                      
 
 #### School Summary
@@ -91,11 +107,13 @@ As shown below, both math and reading 9th grade values for Thomas High School ha
 
 ##### Math by Grade
 
-
+- The changes to math scores based on grades haven't had significant changes.
 
 ![Math_by_grade](Resources/math_grade_performance.png "Math Performance by Grade")
 
 ##### Reading by Grade
+
+- The changes to reading scores based on grades haven't had significant changes.
 
 ![Reading_by_grade](Resources/reading_grade_performance.png "Reading Performance by Grade")
 
@@ -119,7 +137,9 @@ As shown in the range below, small and medium sized schools have relative succes
 
 ##### School Type
 
-School type demonstrates that charter schools earn higher grade score averages. Even more significant is the % Overall Passing difference; Charter passing 90% of their students while District schools pass 54%. There is a correlation to school size as every district school is large in size (2000-5000 students). While technically the performance changed per school type, it's a neglegable amount. 
+- School type demonstrates that charter schools earn higher grade score averages. 
+- Even more significant is the % Overall Passing difference; Charter passing 90% of their students while District schools pass 54%. 
+- There is a correlation to school size as every district school is large in size (2000-5000 students). While technically the performance changed per school type, it's a neglegable amount. 
 
 
 ![Type](Resources/school_type_performance.png "School Type Summary")
@@ -127,5 +147,3 @@ School type demonstrates that charter schools earn higher grade score averages. 
 ## Summary
 ---
 Theere have been changes to Thomas High School math averages, reading averages, math passing percentage, reading passing percentage, and overall passing percentage. The differences are minute, but present. The student count for Thomas High School has been adjusted to exclude 9th graders to more accurately calculate results. The overall passing percentage initially had the most significant change before changing calculations to exclude the 9th grade scores from calculations. There are NaN values shown in both the Thomas High School math and reading score by grade images.
-
-
