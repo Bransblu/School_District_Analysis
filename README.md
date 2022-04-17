@@ -6,7 +6,7 @@
 ---
 
 ### Purpose
-Analyzing school district for the school board utilizing Pandas. It has been decided to change the 9th grade math and reading scores from Thomas High School to NaN with evidence found that the 9th grade scores from Thomas High School have been altered. After altering the Thomas High School data, the school district analysis was redone to completion.
+Analyzing school district for the school board utilizing Pandas. Goal was to organize and calculate scores based on grades, school types, schools, and budget. It has been decided to change the 9th grade math and reading scores from Thomas High School to NaN with evidence found that the 9th grade scores from Thomas High School have been altered. After altering the Thomas High School data, the school district analysis was redone to completion.
 
 ### Conclusion
 It is my recommendation that this data is sufficient to use to report and present to the school board. 
